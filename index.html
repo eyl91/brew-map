@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="assets/style/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <meta charset="UTF-8">
+    <title>Brew Finder</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron row border-black">
+            <h1 class="display-3 mx-auto">Brew Finder</h1>
+        </div>
+        <form>
+                <h2>Search by your location or enter a zipcode!</h2>
+                <button type="submit" class="btn btn-primary" id="location-button">Search by My Location</button>
+                <div class="form-group">
+                    <label for="zipcode"></label>
+                    <input type="text" class="form-control" id="zipcode" placeholder="Enter Zipcode">
+                </div>
+                <button type="submit" class="btn btn-primary" id="zipcode-button">Search by ZipCode</button>
+            </form>
+        <div class="row">
+        	<h2>Search Results</h2>
+        <table class="table" id="trainList">
+            <thead>
+                <tr>
+                    <th scope="col">Brewery Name</th>
+                    <th scope="col">Distance(miles)</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Phone Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!--new breweries pushed into here-->
+                </tr>
+            </tbody>
+        </table>
+        </div>
+       
+            
+     
+    </div>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhfzmSj6hqBiwdJnAt8YULNNePbhflg4Y"
+    async defer></script>
+</body>
+
+</html>

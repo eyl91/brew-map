@@ -1,0 +1,14 @@
+* {
+	box-sizing: border-box;
+}
+
+.row, form {
+	border: 2px solid black;
+	margin: 1%;
+	padding: 1%;
+	border-radius: 10px;
+}
+
+h1 {
+	text-align: center;
+}
