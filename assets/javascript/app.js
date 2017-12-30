@@ -1,14 +1,20 @@
 $(document).ready(function(){
 
-	var lat
-	var lng
-	var zip
+	var lat;
+	var lng;
+	var zip;
+	var radius = 5;//default search radius
+
 	//triggers ajaxByLocation
 	$(document).on("click", '#location-button', function(event){
 		event.preventDefault();
 		$("#breweryList > tbody").empty();
 		ajaxByLocation();
 	});
+	//gets user selected search radius
+	$(document).on("click", '#radius-dropdown', function(event){
+		radius = $(this).val();
+	});	
 	//triggers ajaxByZip
 	$(document).on("click", '#zipcode-button', function(event){
 		event.preventDefault();
@@ -23,8 +29,8 @@ $(document).ready(function(){
    			lat = position.coords.latitude;
    		 	lng = position.coords.longitude;
    			logResults();
-    })
-}
+    	})
+	}
 	//console logs user coordinates
 	function logResults(){
 		console.log("Latitude = " + lat);
@@ -33,7 +39,6 @@ $(document).ready(function(){
 	//initiates breweryDB ajax by user location
 	function ajaxByLocation(){
 		var key = "add62ea870e1bfdea1eee00e3594dbf5";
-		var radius = "1";
 		var queryLocationURL = "https://cors-anywhere.herokuapp.com/http://api.brewerydb.com/v2/search/geo/point?lat=" + lat + "&lng=" + lng + "&radius=" + radius + "&key=" + key +"";
 
 		$.ajax({
