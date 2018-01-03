@@ -10,6 +10,7 @@ $(document).ready(function(){
 		event.preventDefault();
 		$("#breweryList > tbody").empty();
 		ajaxByLocation();
+		initMap();
 	});
 	//gets user selected search radius
 	$(document).on("click", '#radius-dropdown', function(event){
@@ -22,6 +23,7 @@ $(document).ready(function(){
 		console.log(zip);
 		$("#breweryList > tbody").empty();
 		ajaxByZip();
+		initMap();
 	});
 	//gets the users location and stores in lat and lng
 	function getLocation() {
@@ -31,6 +33,17 @@ $(document).ready(function(){
    			logResults();
     	})
 	}
+      function initMap() {
+        var userPosition = {lat: lat, lng: lng};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: userPosition
+        });
+        var marker = new google.maps.Marker({
+          position: userPosition,
+          map: map
+        });
+      }
 	//console logs user coordinates
 	function logResults(){
 		console.log("Latitude = " + lat);
