@@ -4,13 +4,15 @@ $(document).ready(function(){
 	var lng;
 	var zip;
 	var radius = 5;//default search radius
+	var map;
+	var zipLat;
+	var zipLng;
 
 	//triggers ajaxByLocation
 	$(document).on("click", '#location-button', function(event){
+		getLocation();
 		event.preventDefault();
-		$("#breweryList > tbody").empty();
-		ajaxByLocation();
-		initMap();
+		
 	});
 	//gets user selected search radius
 	$(document).on("click", '#radius-dropdown', function(event){
@@ -23,25 +25,35 @@ $(document).ready(function(){
 		console.log(zip);
 		$("#breweryList > tbody").empty();
 		ajaxByZip();
-		initMap();
+		
 	});
 	//gets the users location and stores in lat and lng
 	function getLocation() {
     	navigator.geolocation.getCurrentPosition(function(position) {
    			lat = position.coords.latitude;
    		 	lng = position.coords.longitude;
+   		 	$("#breweryList > tbody").empty();
+			ajaxByLocation();
+			initMap();
    			logResults();
     	})
 	}
       function initMap() {
         var userPosition = {lat: lat, lng: lng};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 12,
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
           center: userPosition
         });
         var marker = new google.maps.Marker({
           position: userPosition,
-          map: map
+          map: map,
+          animation: google.maps.Animation.BOUNCE,
+        });
+      }
+      function initMapZip() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: {lat: zipLat, lng: zipLng}
         });
       }
 	//console logs user coordinates
@@ -63,6 +75,12 @@ $(document).ready(function(){
 			var results = response.data;
 
 			for (var i = 0; i < results.length; i++){
+				var marker = new google.maps.Marker({
+   					position: {lat: results[i].latitude, lng: results[i].longitude},
+    				map: map,
+    				title: results[i].brewery.name,
+    				icon: "assets/images/icon-beer.png",
+					});
 				var tdRow = $("<tr>");
 				var name = $("<td>");
 				name.text(results[i].brewery.name);
@@ -75,13 +93,12 @@ $(document).ready(function(){
 				var image = $("<td>");
 				var imageSrc = $("<img>");
 				image.append(imageSrc);
-				imageSrc.attr("src", results[i].brewery.images.squareLarge);
-				console.log(results[i].brewery.images.squareLarge)
+				imageSrc.attr("src", results[i].brewery.images.icon);
+				tdRow.append(image);
 				tdRow.append(name);
 				tdRow.append(address);
 				tdRow.append(phone);
 				tdRow.append(dis);
-				tdRow.append(image);
 				$("#breweryList > tbody").append(tdRow); 
 			}
 
@@ -101,14 +118,28 @@ $(document).ready(function(){
 			console.log(response.data);
 		//looping thru results and adding to table
 			var results = response.data;
+			zipLat = results[0].latitude;
+			zipLng = results[0].longitude;
+			initMapZip();
 
 			for (var i = 0; i < results.length; i++){
+				var marker = new google.maps.Marker({
+   					position: {lat: results[i].latitude, lng: results[i].longitude},
+    				map: map,
+    				title: results[i].brewery.name,
+    				icon: "assets/images/icon-beer.png",
+					});
 				var tdRow = $("<tr>");
 				var name = $("<td>");
 				name.text(results[i].brewery.name);
 				var address = $("<td>");
 				address.text(results[i].streetAddress);
 				var phone = $("<td>");
+				var image = $("<td>");
+				var imageSrc = $("<img>");
+				image.append(imageSrc);
+				imageSrc.attr("src", results[i].brewery.images.icon);
+				tdRow.append(image);
 				phone.text(results[i].phone);
 				tdRow.append(name);
 				tdRow.append(address);
@@ -117,7 +148,7 @@ $(document).ready(function(){
 			}
 		})
 	}	
-getLocation();
+
 
 });
 
