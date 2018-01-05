@@ -1,0 +1,201 @@
+/*
+BEER APP
+Project 1
+*/
+
+body {
+	overflow: hidden;
+}
+
+
+
+/*---------------------- MAIN CONTAINER ------------------------------------------>*/
+
+
+.main-container {
+	display: flex;
+	margin-top: 20px;
+	position: relative;
+}
+
+.beer-box {
+	height: 100%;
+	flex-grow: 1;
+	width: 0 auto;
+	position: relative;
+}
+
+.search-box {
+	position: relative;
+	top: 50px;
+	left: 25%;
+	flex-grow: 1;
+	width: 100px;
+}
+
+.submit-btn-loc {
+	background-color: white;
+	color: gray;
+	border-top: none;
+	border-bottom: none;
+	border-right: gray 0.2px solid;
+	border-left: gray 0.2px solid;
+	font-family: 'Libre Baskerville', serif;
+	padding: 0 20px 0 20px;
+}
+
+.submit-btn-code {
+	background-color: white;
+	color: gray;
+	border: none;
+	font-family: 'Libre Baskerville', serif;
+	padding: 1px 20px 1px 20px;
+}
+
+.submit-btn-loc-tm {
+	background-color: white;
+	color: gray;
+	border-top: none;
+	border-bottom: none;
+	border-right: gray 0.2px solid;
+	border-left: gray 0.2px solid;
+	font-family: 'Libre Baskerville', serif;
+	padding: 0 20px 0 20px;
+}
+
+.submit-btn-code-tm {
+	background-color: white;
+	color: gray;
+	border: none;
+	font-family: 'Libre Baskerville', serif;
+	padding: 1px 20px 1px 20px;
+}
+
+.search-item {
+	display: flex;
+}
+
+.beer-img {
+	position: absolute;
+	top: 0;
+	left: 10%;
+	overflow: hidden;
+	width: 0 auto;
+}
+
+.name {
+	font-family: 'Abril Fatface', cursive;
+	margin-bottom: 20px;
+	font-size: 100px;
+	line-height: 80px;
+}
+
+.beer {
+	height: 900px;
+	width: 250px;
+}
+
+.view-btn {
+	font-family: untitled-font-1;
+	background-color: white;
+	color: gray;
+	border: none;
+	size: 30px;
+	align-items: center; 
+}
+
+.intro {
+	font-family: 'Dancing Script', cursive;
+	margin-bottom: 20px;
+	color: gray;
+}
+.explore {
+	font-family: 'Playfair Display', serif;
+	margin-bottom: 20px;
+}
+
+.form {
+	width: 50px;
+}
+
+
+
+
+/*---------------------- TOP MENU ------------------------------------------>*/
+
+
+.inp-btn{
+	display: flex;
+} 
+
+.top-menu {
+	display: flex;
+	border-bottom: 1px gray solid;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	max-height: 340px;
+	opacity: 0;
+	z-index: 9999;
+	background-color: white;
+}
+
+.tm-one {
+	flex-grow: 8;
+}
+
+.tm-two {
+	flex-grow: 7;
+}
+
+.name-tm {
+	font-family: 'Abril Fatface', cursive;
+	margin: 20px 0 20px 100px;
+	font-size: 80px;
+	line-height: 80px;
+}
+
+.explore-tm {
+	padding-top: 10px;
+	font-family: 'Playfair Display', serif;
+}
+
+.views-btn {
+	display:flex;
+}
+
+.submit-btn-tm {
+	order: 1;
+	margin-top: 10px;
+}
+
+.f-cont-tm {
+	order: 1;
+	margin-top: 10px;
+}
+
+/*.hops {
+	background-image: url('file:///c:/Users/RICGRO1221/Desktop/UCSD/RICGRO1221.github.io/BeerApp/assets/images/Beer_bg3.jpg');
+	opacity: 0.3;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
