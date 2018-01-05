@@ -19,7 +19,7 @@ h1 {
    background-color: grey;
  }
 
-.testimonial-group > .row {
+/*.testimonial-group > .row {
   overflow-x: auto;
   white-space: nowrap;
 }
@@ -27,4 +27,4 @@ h1 {
   display: inline-block;
   float: none;
 }
-.col-xs-4 { font-size: 48px; padding-bottom: 20px; padding-top: 18px; }
+.col-xs-4 { font-size: 48px; padding-bottom: 20px; padding-top: 18px; }*/

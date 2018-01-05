@@ -4,6 +4,8 @@ $(document).ready(function(){
 	var lng;
 	var zip;
 	var radius = 5;//default search radius
+	var locations = [];
+	var map;
 
 	//triggers ajaxByLocation
 	$(document).on("click", '#location-button', function(event){
@@ -33,17 +35,18 @@ $(document).ready(function(){
    			logResults();
     	})
 	}
-      function initMap() {
-        var userPosition = {lat: lat, lng: lng};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 12,
-          center: userPosition
-        });
-        var marker = new google.maps.Marker({
-          position: userPosition,
-          map: map
-        });
-      }
+	  function initMap() {
+	    var userPosition = {lat: lat, lng: lng};
+	    map = new google.maps.Map(document.getElementById('map'), {
+	      zoom: 12,
+	      center: userPosition
+	    });
+	    var marker = new google.maps.Marker({
+	      position: userPosition,
+	      map: map
+	    });
+
+	  }
 	//console logs user coordinates
 	function logResults(){
 		console.log("Latitude = " + lat);
@@ -63,6 +66,14 @@ $(document).ready(function(){
 			var results = response.data;
 
 			for (var i = 0; i < results.length; i++){
+				
+				
+  
+      			var marker = new google.maps.Marker({
+				  position: { lat: results[i].latitude, lng: results[i].longitude },
+				  map: map
+				});
+				
 				var tdRow = $("<tr>");
 				var name = $("<td>");
 				name.text(results[i].brewery.name);
@@ -75,14 +86,15 @@ $(document).ready(function(){
 				var image = $("<td>");
 				var imageSrc = $("<img>");
 				image.append(imageSrc);
-				imageSrc.attr("src", results[i].brewery.images.squareLarge);
-				console.log(results[i].brewery.images.squareLarge)
+				imageSrc.attr("src", results[i].brewery.images.icon);
+				tdRow.append(image);
 				tdRow.append(name);
 				tdRow.append(address);
 				tdRow.append(phone);
 				tdRow.append(dis);
-				tdRow.append(image);
+
 				$("#breweryList > tbody").append(tdRow); 
+
 			}
 
 		})
@@ -110,6 +122,11 @@ $(document).ready(function(){
 				address.text(results[i].streetAddress);
 				var phone = $("<td>");
 				phone.text(results[i].phone);
+				var image = $("<td>");
+				var imageSrc = $("<img>");
+				image.append(imageSrc);
+				imageSrc.attr("src", results[i].brewery.images.icon);
+				tdRow.append(image);
 				tdRow.append(name);
 				tdRow.append(address);
 				tdRow.append(phone);
