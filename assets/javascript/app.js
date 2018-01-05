@@ -72,10 +72,16 @@ $(document).ready(function(){
 				address.text(results[i].streetAddress);
 				var phone = $("<td>");
 				phone.text(results[i].phone);
+				var image = $("<td>");
+				var imageSrc = $("<img>");
+				image.append(imageSrc);
+				imageSrc.attr("src", results[i].brewery.images.squareLarge);
+				console.log(results[i].brewery.images.squareLarge)
 				tdRow.append(name);
 				tdRow.append(address);
 				tdRow.append(phone);
 				tdRow.append(dis);
+				tdRow.append(image);
 				$("#breweryList > tbody").append(tdRow); 
 			}
 
