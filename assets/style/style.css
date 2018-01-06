@@ -3,18 +3,35 @@ BEER APP
 Project 1
 */
 
-body {
-    overflow: hidden;
-}
 
-
+/*body {
+	overflow: hidden;
+}*/
 
 
 /*---------------------- MAIN CONTAINER ------------------------------------------>*/
-
 .table-cont {
-   /* border: black 3px solid;*/
-    margin-top: 10%;
+	flex-grow: 3;
+	order: 1;
+	position: absolute;
+	margin-top: 7%;
+	left: 4%;
+}
+
+
+.gmaps {
+	position: fixed;
+	min-height: 600px;
+	min-width: 650px;
+	margin-top: 5%;
+	left: 58%;
+}
+
+.map {
+	min-width: 650px;
+	min-height: 650px;
+
+
 }
 
 .main-container {
@@ -41,44 +58,44 @@ body {
 .submit-btn-loc {
     background-color: white;
     color: gray;
-    border-top: none;
-    border-bottom: none;
-    border-right: gray 0.2px solid;
-    border-left: gray 0.2px solid;
+    /* border-top: none; */
+    /* border-bottom: none; */
+    /* border-right: gray 0.2px solid; */
+    /* border-left: gray 0.2px solid; */
     font-family: 'Libre Baskerville', serif;
     padding: 0 20px 0 20px;
+    border: none;
 }
 
 
-#btnGroupDrop1 {
-    border-left: none;
-}
-
-.submit-btn-code {
+/*.submit-btn-code {
     background-color: white;
     color: gray;
     border: none;
     font-family: 'Libre Baskerville', serif;
     padding: 1px 20px 1px 20px;
-}
+}*/
 
-.submit-btn-loc-tm {
+.submit-btn-loc-tm, #zipcode-button{
     background-color: white;
     color: gray;
-    border-top: none;
-    border-bottom: none;
-    border-right: gray 0.2px solid;
-    border-left: gray 0.2px solid;
+    /* border-top: none; */
+    /* border-bottom: none; */
+    /* border-right: gray 0.2px solid; */
+    /* border-left: gray 0.2px solid; */
     font-family: 'Libre Baskerville', serif;
-    padding: 0 20px 0 20px;
-}
-
-.submit-btn-code-tm {
-    background-color: white;
-    color: gray;
+    /* padding: 0 20px 0 20px; */
     border: none;
-    font-family: 'Libre Baskerville', serif;
-    padding: 1px 20px 1px 20px;
+}
+
+#dropdownMenuButton {
+    padding: 10px;
+
+    border-right: 1px solid gray;
+}
+
+#location-button {
+    border-right: 1px solid gray;
 }
 
 .search-item {
@@ -187,11 +204,6 @@ body {
 .f-cont-tm {
     order: 1;
     margin-top: 10px;
-}
-
-#map {
-    width: 100%;
-    height: 600px;
 }
 
 
