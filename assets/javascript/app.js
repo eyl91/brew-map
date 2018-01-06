@@ -15,8 +15,10 @@ $(document).ready(function(){
 		
 	});
 	//gets user selected search radius
-	$(document).on("click", '#radius-dropdown', function(event){
+
+	$(document).on("click", '.dropdown-item', function(event){
 		radius = $(this).val();
+
 	});	
 	//triggers ajaxByZip
 	$(document).on("click", '#zipcode-button', function(event){
@@ -170,6 +172,7 @@ var slideIndex = 0;
     }
 
 // ------------------
+
 
 	function displayTopMenu() {
 		// Make Fixed menu appear by changing it's css...
