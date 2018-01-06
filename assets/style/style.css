@@ -76,7 +76,7 @@ Project 1
     padding: 1px 20px 1px 20px;
 }*/
 
-.submit-btn-loc-tm, #zipcode-button{
+.submit-btn-loc-tm, .submit-btn-code {
     background-color: white;
     color: gray;
     /* border-top: none; */
