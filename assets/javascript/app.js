@@ -99,7 +99,7 @@ $(document).ready(function(){
 				tdRow.append(address);
 				tdRow.append(phone);
 				tdRow.append(dis);
-				$("#breweryList > tbody").append(tdRow); 
+				$(".table > tbody").append(tdRow); 
 			}
 
 		})
@@ -191,19 +191,21 @@ $(document).ready(function(){
 
 
 			function createTable() {
+				// Add Class and header to the Main Container...
+				$('.main-container').addClass('row');
+				$('.main-container').html('<h4 class="table-name">Search Results</h4>');
+				// Create DIV that contains Table...
 				var tableContainer = $('<div>').addClass('table-cont');
 				// Create table add Class and Id attributes...
 				var table = $('<table>').addClass('table');
-				table.attr('id', 'breweryList');
 				// Create table row...
 				var row = $('<tr>');
 				// Create Table Body...
 				var tableBody = $('<tbody>');
+				// Added id name...
+				tableBody.attr('id', 'breweryList');
 				// Text for table headers.
 				var hedrs = ['Brewery Name', 'Address', 'Phone Number', 'Distance', 'Logo']; 
-				// Add Class and header to the Main Container...
-				$('.main-container').addClass('row');
-				$('.main-container').html('<h4 class="table-name">Search Results</h4>');
 				// Creates a TH tag for every item on the hedrs array...
 				for(i = 0; i < hedrs.length; i++) {
 				   	var tabHead = $('<th>').attr('scope', 'col');
@@ -215,8 +217,8 @@ $(document).ready(function(){
 				// Insert Table Row to the table...
 				table.append(row);
 				// Insert Table to the Main Container...
+				$(table).append(tableBody);
 				$(tableContainer).append(table);
-				$(tableContainer).append(tableBody);
 				$('.main-container').append(tableContainer);
 			};
 }); // Document Closing tag...
