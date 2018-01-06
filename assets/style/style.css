@@ -89,7 +89,13 @@ Project 1
 }
 
 #dropdownMenuButton {
-    margin-top: 7%;
+    padding: 10px;
+
+    border-right: 1px solid gray;
+}
+
+#location-button {
+    border-right: 1px solid gray;
 }
 
 .search-item {
