@@ -15,8 +15,10 @@ $(document).ready(function(){
 		
 	});
 	//gets user selected search radius
-	$(document).on("click", '#radius-dropdown', function(event){
+
+	$(document).on("click", '.dropdown-item', function(event){
 		radius = $(this).val();
+
 	});	
 	//triggers ajaxByZip
 	$(document).on("click", '#zipcode-button', function(event){
@@ -152,6 +154,24 @@ $(document).ready(function(){
 
 
 //--------------------- Front End--------------------------->
+
+// --------- carousel
+var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000); // Change image every 4 seconds
+    }
+
+// ------------------
 
 
 	function displayTopMenu() {
