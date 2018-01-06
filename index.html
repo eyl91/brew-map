@@ -1,74 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-	<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="assets/style/reset.css">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="assets/style/style.css">
-    <meta charset="UTF-8">
-    <title>Brew Finder</title>
+    <title>Beer App</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- CSS link -->
+    <link rel="stylesheet" type="text/css" href="./assets/style/style.css">
+    <!-- JQUERY link -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <!-- GOOGLE FONTS link -->
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Playfair+Display:700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400i" rel="stylesheet">
+    <!-- FONTASTIC link -->
+    <link href="https://file.myfontastic.com/jufLzixgK27uoFkbjdSE3i/icons.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <div class="jumbotron row border-black">
-            <h1 class="display-3 mx-auto">Brew Finder</h1>
+        <!-- TOP MENU -->
+        <div class="top-menu">
+            <div class="tm-one tm">
+                <h1 class="name-tm">THE BEER LIST</h1>
+            </div>
+            <div class="tm-two tm">
+                <div class="exp-box">
+                    <h2 class="explore-tm">Explore by</h2>
+                </div>
+                <div class="inp-btn">
+                    <button class="submit-btn-loc-tm">Location</button>
+                    <button class="submit-btn-code-tm">Code</button>
+                    <input id="main-form-tm" class="form-control w-25 h-20" type="text" placeholder="Enter Zip Code">
+                </div>
+                <div class="views-btn">
+                    <button class="view-btn">d</button>
+                    <button class="view-btn">t</button>
+                </div>
+            </div>    
         </div>
-            <form>
-                <h2>Search by your location or enter a zipcode!</h2>
-                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                    <button type="button" class="btn btn-primary" id="zipcode-button">Search by ZipCode</button>
-                    <button type="button" class="btn btn-secondary" id="location-button">Search by My Location</button>
 
-                    <div class="btn-group" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Search Radius (mi)
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                            <button class="dropdown-item" id="radius-dropdown" type="button" value="1">1</button>
-                            <button class="dropdown-item" id="radius-dropdown" type="button" value="3">3</button>
-                            <button class="dropdown-item" id="radius-dropdown" type="button" value="5">5</button>
-                            <button class="dropdown-item" id="radius-dropdown" type="button" value="10">10</button>
-                            <button class="dropdown-item" id="radius-dropdown" type="button" value="20">20</button>
-                            <button class="dropdown-item" id="radius-dropdown" type="button" value="100">MAX</button>
-                        </div>
-                    </div>
+        <!-- MAIN CONTAINER -->
+        <div class="main-container">
+            <div class="search-box">
+                <h1 class="name">THE <br/> BEER <br/>LIST</h1>
+                <h3 class="intro">Looking for a place to have a beer? <br/> You' ve come to the right site. </h3>
+                <h2 class="explore">Explore by</h2>
+                <div class="search-item">
+                    <button class="submit-btn-loc">Location</button>
+                    <button class="submit-btn-code"> Code</button>
+                    <input id="main-form" class="form-control w-25" type="text" placeholder="Enter Zip Code">
                 </div>
-                <div class="form-group">
-                    <label for="zipcode"></label>
-                    <input type="text" class="form-control" id="zipcode" placeholder="Enter Zipcode">
-                </div>
-            </form>
-        <div class="row">
-        	<h2>Search Results</h2>
-        <table class="table" id="breweryList">
-            <thead>
-                <tr>
-                    <th scope="col"></th>
-                    <th scope="col">Brewery Name</th>
-                    <th scope="col">Address</th>
-                    <th scope="col">Phone Number</th>
-                    <th scope="col">Distance</th>
-                </tr>
-            </thead>
-            <tbody>
-                    <!--new breweries pushed into here-->
-            </tbody>
-        </table>
-        </div>
-        <div id="map"></div>
-       
+            </div>
             
-     
-    </div>
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.bundle.min.js" integrity="sha384-VspmFJ2uqRrKr3en+IG0cIq1Cl/v/PHneDw6SQZYgrcr8ZZmZoQ3zhuGfMnSR/F2" crossorigin="anonymous"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhfzmSj6hqBiwdJnAt8YULNNePbhflg4Y"></script>
+            <div class="beer-box">
+                <div class="beer-img">
+                    <img class="beer" src="./assets/images/beer2.gif">
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- JS script -->
+        <script type="text/javascript" src="./assets/javascript/app.js"></script>
 </body>
 
 </html>
