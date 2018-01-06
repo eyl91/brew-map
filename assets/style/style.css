@@ -4,185 +4,197 @@ Project 1
 */
 
 body {
-	overflow: hidden;
+    overflow: hidden;
 }
+
 
 
 
 /*---------------------- MAIN CONTAINER ------------------------------------------>*/
 
-.table tr tbody{
-	border: black 3px solid;
+.table-cont {
+   /* border: black 3px solid;*/
+    margin-top: 10%;
 }
 
 .main-container {
-	display: flex;
-	margin-top: 20px;
-	position: relative;
+    display: flex;
+    margin-top: 20px;
+    position: relative;
 }
 
 .beer-box {
-	height: 100%;
-	flex-grow: 1;
-	width: 0 auto;
-	position: relative;
+    height: 100%;
+    flex: 1;
+    /*width: 0 auto;*/
+    position: relative;
 }
 
 .search-box {
-	position: relative;
-	top: 50px;
-	left: 25%;
-	flex-grow: 1;
-	width: 100px;
+    position: relative;
+    top: 50px;
+    /*left: 25%;*/
+    flex: 3;
+    width: 100px;
 }
 
 .submit-btn-loc {
-	background-color: white;
-	color: gray;
-	border-top: none;
-	border-bottom: none;
-	border-right: gray 0.2px solid;
-	border-left: gray 0.2px solid;
-	font-family: 'Libre Baskerville', serif;
-	padding: 0 20px 0 20px;
+    background-color: white;
+    color: gray;
+    border-top: none;
+    border-bottom: none;
+    border-right: gray 0.2px solid;
+    border-left: gray 0.2px solid;
+    font-family: 'Libre Baskerville', serif;
+    padding: 0 20px 0 20px;
+}
+
+
+#btnGroupDrop1 {
+    border-left: none;
 }
 
 .submit-btn-code {
-	background-color: white;
-	color: gray;
-	border: none;
-	font-family: 'Libre Baskerville', serif;
-	padding: 1px 20px 1px 20px;
+    background-color: white;
+    color: gray;
+    border: none;
+    font-family: 'Libre Baskerville', serif;
+    padding: 1px 20px 1px 20px;
 }
 
 .submit-btn-loc-tm {
-	background-color: white;
-	color: gray;
-	border-top: none;
-	border-bottom: none;
-	border-right: gray 0.2px solid;
-	border-left: gray 0.2px solid;
-	font-family: 'Libre Baskerville', serif;
-	padding: 0 20px 0 20px;
+    background-color: white;
+    color: gray;
+    border-top: none;
+    border-bottom: none;
+    border-right: gray 0.2px solid;
+    border-left: gray 0.2px solid;
+    font-family: 'Libre Baskerville', serif;
+    padding: 0 20px 0 20px;
 }
 
 .submit-btn-code-tm {
-	background-color: white;
-	color: gray;
-	border: none;
-	font-family: 'Libre Baskerville', serif;
-	padding: 1px 20px 1px 20px;
+    background-color: white;
+    color: gray;
+    border: none;
+    font-family: 'Libre Baskerville', serif;
+    padding: 1px 20px 1px 20px;
 }
 
 .search-item {
-	display: flex;
-}
-
-.beer-img {
-	position: absolute;
-	top: 0;
-	left: 7%;
-	overflow: hidden;
-	width: 0 auto;
-}
-
-.name {
-	font-family: 'Abril Fatface', cursive;
-	margin-bottom: 20px;
-	font-size: 100px;
-	line-height: 80px;
+    display: flex;
 }
 
 .beer {
-	height: 1000px;
-	width: 270px;
+    position: absolute;
+    top: 0;
+    left: 7%;
+    overflow: hidden;
+    width: 0 auto;
+    max-width: 1000px;
 }
 
+.name {
+    font-family: 'Abril Fatface', cursive;
+    margin-bottom: 20px;
+    font-size: 100px;
+    line-height: 80px;
+}
+
+
+/*.beer {
+	height: 1000px;
+	width: 270px;
+}*/
+
 .view-btn {
-	font-family: untitled-font-1;
-	background-color: white;
-	color: gray;
-	border: none;
-	size: 30px;
-	align-items: center; 
+    font-family: untitled-font-1;
+    background-color: white;
+    color: gray;
+    border: none;
+    size: 30px;
+    align-items: center;
 }
 
 .intro {
-	font-family: 'Dancing Script', cursive;
-	margin-bottom: 20px;
-	color: gray;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 20px;
+    color: gray;
 }
+
 .explore {
-	font-family: 'Playfair Display', serif;
-	margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
 }
 
 .form {
-	width: 50px;
+    width: 50px;
 }
+
 
 
 
 
 /*---------------------- TOP MENU ------------------------------------------>*/
 
-
-.inp-btn{
-	display: flex;
-} 
+.inp-btn {
+    display: flex;
+}
 
 .top-menu {
-	display: flex;
-	border-bottom: 1px gray solid;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: auto;
-	max-height: 340px;
-	opacity: 0;
-	z-index: 9999;
-	background-color: white;
+    display: flex;
+    border-bottom: 1px gray solid;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    max-height: 340px;
+    opacity: 0;
+    z-index: 9999;
+    background-color: white;
 }
 
 .tm-one {
-	flex-grow: 8;
+    flex-grow: 8;
 }
 
 .tm-two {
-	flex-grow: 7;
+    flex-grow: 7;
 }
 
 .name-tm {
-	font-family: 'Abril Fatface', cursive;
-	margin: 20px 0 20px 100px;
-	font-size: 80px;
-	line-height: 80px;
+    font-family: 'Abril Fatface', cursive;
+    margin: 20px 0 20px 100px;
+    font-size: 80px;
+    line-height: 80px;
 }
 
 .explore-tm {
-	padding-top: 10px;
-	font-family: 'Playfair Display', serif;
+    padding-top: 10px;
+    font-family: 'Playfair Display', serif;
 }
 
 .views-btn {
-	display:flex;
+    display: flex;
 }
 
 .submit-btn-tm {
-	order: 1;
-	margin-top: 10px;
+    order: 1;
+    margin-top: 10px;
 }
 
 .f-cont-tm {
-	order: 1;
-	margin-top: 10px;
+    order: 1;
+    margin-top: 10px;
 }
 
 #map {
-   width: 100%;
-   height: 600px;
- }
+    width: 100%;
+    height: 600px;
+}
+
+
 /*.hops {
 	background-image: url('file:///c:/Users/RICGRO1221/Desktop/UCSD/RICGRO1221.github.io/BeerApp/assets/images/Beer_bg3.jpg');
 	opacity: 0.3;
@@ -192,18 +204,64 @@ body {
 }*/
 
 
+/*------------------------carousel on bottle-----------------------*/
+
+* {
+    box-sizing: border-box
+}
+
+.beer-box {
+    width: 300px;
+    position: relative;
+}
 
 
+/* Slideshow container */
+
+.beer-img {
+    border: 2px solid black;
+    max-width: 1000px;
+    position: absolute;
+    top: 400px;
+    left: 30%;
+}
+
+.beer {
+    margin-left: 10%;
+}
 
 
+/* Hide the images by default */
+
+.mySlides {
+    display: none;
+    width: 40%;
+}
 
 
+/* Fading animation */
 
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
 
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
 
-
-
-
-
-
-
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
