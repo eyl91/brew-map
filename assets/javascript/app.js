@@ -21,7 +21,7 @@ $(document).ready(function(){
 	//triggers ajaxByZip
 	$(document).on("click", '#zipcode-button', function(event){
 		event.preventDefault();
-		zip = $("#zipcode").val().trim();
+		zip = $("#main-form").val().trim();
 		console.log(zip);
 		$("#breweryList > tbody").empty();
 		ajaxByZip();
@@ -144,7 +144,7 @@ $(document).ready(function(){
 				tdRow.append(name);
 				tdRow.append(address);
 				tdRow.append(phone);
-				$("#breweryList > tbody").append(tdRow); 
+				$("#brewery > tbody").append(tdRow); 
 			}
 		})
 	}	
@@ -165,13 +165,14 @@ $(document).ready(function(){
 	        // Add New style to Main Container...
 	        $('.main-container').addClass('hops');
 	        // Run function createTable...
+	        displayTopMenu();
 	        createTable();
 	});
 
 
 	$('.submit-btn-code').on('click', function() {
 			// Save the value entered by the user inside a variable...
-	        var usersLocationInput = $('#zipcode').val();
+	        var usersLocationInput = $('#main-form').val();
 	        // Verify value is not empty
 	        if (usersLocationInput > 0) {
 	         	// Call function to display Fixed menu...

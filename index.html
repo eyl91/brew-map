@@ -30,8 +30,8 @@
                     <h2 class="explore-tm">Explore by</h2>
                 </div>
                 <div class="inp-btn">
-                    <button class="submit-btn-loc-tm">Location</button>
-                    <button class="submit-btn-code-tm">Code</button>
+                    <button class="submit-btn-loc-tm" id="location-button">Location</button>
+                    <button class="submit-btn-code-tm" id="zipcode-button">Code</button>
                     <input id="main-form-tm" class="form-control w-25 h-20" type="text" placeholder="Enter Zip Code">
                 </div>
                 <div class="views-btn">
@@ -48,8 +48,8 @@
                 <h3 class="intro">Looking for a place to have a beer? <br/> You' ve come to the right site. </h3>
                 <h2 class="explore">Explore by</h2>
                 <div class="search-item">
-                    <button class="submit-btn-loc">Location</button>
-                    <button class="submit-btn-code"> Code</button>
+                    <button class="submit-btn-loc" id="location-button">Location</button>
+                    <button class="submit-btn-code" id="zipcode-button"> Code</button>
                     <input id="main-form" class="form-control w-25" type="text" placeholder="Enter Zip Code">
                 </div>
             </div>
@@ -60,11 +60,17 @@
                 </div>
 
             </div>
+
+
         </div>
+        <div id="map"></div>
 
 
         <!-- JS script -->
         <script type="text/javascript" src="./assets/javascript/app.js"></script>
+        <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhfzmSj6hqBiwdJnAt8YULNNePbhflg4Y">
+    </script>
 </body>
 
 </html>
