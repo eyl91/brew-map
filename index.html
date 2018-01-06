@@ -4,12 +4,12 @@
 <head>
     <title>Beer App</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- CSS link -->
-    <link rel="stylesheet" type="text/css" href="./assets/style/style.css">
     <!-- JQUERY link -->
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <!-- BOOTSTRAP link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!-- POPPER link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <!-- GOOGLE FONTS link -->
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Playfair+Display:700i" rel="stylesheet">
@@ -17,6 +17,8 @@
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400i" rel="stylesheet">
     <!-- FONTASTIC link -->
     <link href="https://file.myfontastic.com/jufLzixgK27uoFkbjdSE3i/icons.css" rel="stylesheet">
+    <!-- CSS link -->
+    <link rel="stylesheet" type="text/css" href="./assets/style/style.css">
 </head>
 
 <body>
@@ -31,17 +33,17 @@
             </div>
             <div class="inp-btn">
                 <button class="submit-btn-loc-tm" id="location-button">Your Location</button>
-                <div class="btn-group" role="group">
-                    <button id="btnGroupDrop1" type="button" class="submit-btn-loc-tm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="dropdown">
+                    <button id="dropdownMenuButton" type="button" class="submit-btn-loc-tm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Search Radius (mi)
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                        <button class="dropdown-item" id="radius-dropdown" type="button" value="1">1</button>
-                        <button class="dropdown-item" id="radius-dropdown" type="button" value="3">3</button>
-                        <button class="dropdown-item" id="radius-dropdown" type="button" value="5">5</button>
-                        <button class="dropdown-item" id="radius-dropdown" type="button" value="10">10</button>
-                        <button class="dropdown-item" id="radius-dropdown" type="button" value="20">20</button>
-                        <button class="dropdown-item" id="radius-dropdown" type="button" value="100">MAX</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <button class="dropdown-item" type="button" value="1">1</button>
+                        <button class="dropdown-item" type="button" value="3">3</button>
+                        <button class="dropdown-item" type="button" value="5">5</button>
+                        <button class="dropdown-item" type="button" value="10">10</button>
+                        <button class="dropdown-item" type="button" value="20">20</button>
+                        <button class="dropdown-item" type="button" value="100">MAX</button>
                     </div>
                 </div>
                 <button class="submit-btn-code-tm" id="zipcode-button">Zip Code</button>
@@ -83,17 +85,17 @@
             <h2 class="explore">Explore by</h2>
             <div class="search-item">
                 <button class="submit-btn-loc" id="location-button">Your Location</button>
-                <div class="btn-group" role="group">
-                    <button id="btnGroupDrop1" type="button" class="submit-btn-loc dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="dropdown">
+                    <button id="dropdownMenuButton" type="button" class="submit-btn-loc-tm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Search Radius (mi)
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                        <button class="dropdown-item" id="radius-dropdown" type="button" value="1">1</button>
-                        <button class="dropdown-item" id="radius-dropdown" type="button" value="3">3</button>
-                        <button class="dropdown-item" id="radius-dropdown" type="button" value="5">5</button>
-                        <button class="dropdown-item" id="radius-dropdown" type="button" value="10">10</button>
-                        <button class="dropdown-item" id="radius-dropdown" type="button" value="20">20</button>
-                        <button class="dropdown-item" id="radius-dropdown" type="button" value="100">MAX</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <button class="dropdown-item" type="button" value="1">1</button>
+                        <button class="dropdown-item" type="button" value="3">3</button>
+                        <button class="dropdown-item" type="button" value="5">5</button>
+                        <button class="dropdown-item" type="button" value="10">10</button>
+                        <button class="dropdown-item" type="button" value="20">20</button>
+                        <button class="dropdown-item" type="button" value="100">MAX</button>
                     </div>
                 </div>
                 <button class="submit-btn-code" id="zipcode-button"> Zip Code</button>
@@ -101,7 +103,6 @@
                 <input id="main-form" class="form-control w-25" type="text" placeholder="Enter Zip Code">
             </div>
         </div>
-    
     </div>
     <div id="map"></div>
     <!-- JS script -->

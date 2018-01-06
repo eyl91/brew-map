@@ -41,44 +41,38 @@ body {
 .submit-btn-loc {
     background-color: white;
     color: gray;
-    border-top: none;
-    border-bottom: none;
-    border-right: gray 0.2px solid;
-    border-left: gray 0.2px solid;
+    /* border-top: none; */
+    /* border-bottom: none; */
+    /* border-right: gray 0.2px solid; */
+    /* border-left: gray 0.2px solid; */
     font-family: 'Libre Baskerville', serif;
     padding: 0 20px 0 20px;
+    border: none;
 }
 
 
-#btnGroupDrop1 {
-    border-left: none;
-}
-
-.submit-btn-code {
+/*.submit-btn-code {
     background-color: white;
     color: gray;
     border: none;
     font-family: 'Libre Baskerville', serif;
     padding: 1px 20px 1px 20px;
-}
+}*/
 
-.submit-btn-loc-tm {
+.submit-btn-loc-tm, #zipcode-button{
     background-color: white;
     color: gray;
-    border-top: none;
-    border-bottom: none;
-    border-right: gray 0.2px solid;
-    border-left: gray 0.2px solid;
+    /* border-top: none; */
+    /* border-bottom: none; */
+    /* border-right: gray 0.2px solid; */
+    /* border-left: gray 0.2px solid; */
     font-family: 'Libre Baskerville', serif;
-    padding: 0 20px 0 20px;
-}
-
-.submit-btn-code-tm {
-    background-color: white;
-    color: gray;
+    /* padding: 0 20px 0 20px; */
     border: none;
-    font-family: 'Libre Baskerville', serif;
-    padding: 1px 20px 1px 20px;
+}
+
+#dropdownMenuButton {
+    margin-top: 7%;
 }
 
 .search-item {
