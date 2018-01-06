@@ -11,6 +11,9 @@ body {
 
 /*---------------------- MAIN CONTAINER ------------------------------------------>*/
 
+.table tr tbody{
+	border: black 3px solid;
+}
 
 .main-container {
 	display: flex;
@@ -78,7 +81,7 @@ body {
 .beer-img {
 	position: absolute;
 	top: 0;
-	left: 10%;
+	left: 7%;
 	overflow: hidden;
 	width: 0 auto;
 }
@@ -91,8 +94,8 @@ body {
 }
 
 .beer {
-	height: 900px;
-	width: 250px;
+	height: 1000px;
+	width: 270px;
 }
 
 .view-btn {
