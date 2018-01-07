@@ -124,7 +124,7 @@ body {
     padding: 1px 20px 1px 20px;
 }*/
 
-.submit-btn-loc-tm, #zipcode-button{
+.submit-btn-loc-tm, .#zipcode-button2 {
     background-color: white;
     color: black;
     font-size: 18px; 
@@ -139,6 +139,10 @@ body {
 #dropdownMenuButton {
     margin-top: 4%;
     padding: 0 20px 0 20px;
+}
+
+.search-item {
+    display: flex;
 }
 
 .name {

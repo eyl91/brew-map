@@ -2,8 +2,10 @@
 <html>
 
 <head>
-    <title>Beer App</title>
+    <title>The Beer List</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- favicon-->
+    <link rel="icon" href="./assets/images/icon-beer.png"/>
     <!-- JQUERY link -->
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <!-- BOOTSTRAP link -->
@@ -49,7 +51,7 @@
                         <button class="dropdown-item" type="button" value="100">MAX</button>
                     </div>
                 </div>
-                <button class="submit-btn-code-tm" id="zipcode-button">Zip Code</button>
+                <button class="submit-btn-code" id="zipcode-button1">Zip Code</button>
                 <input id="main-form-tm" class="form-control w-25 h-20" type="text" placeholder="Enter Zip Code">
             </div>
             <div class="views-btn">
@@ -99,7 +101,7 @@
                         <button class="submit-btn-loc " id="location-button">Your Location</button>
                         <br/>
                         <!-- Find by Zip Code button -->
-                        <button class="submit-btn-code" id="zipcode-button"> Zip Code</button>
+                        <button class="submit-btn-code" id="zipcode-button2"> Zip Code</button>
                         <!-- Input field -->
                         <input id="main-form" class="form-control w-25" type="text" placeholder="Enter Zip Code">
                 </div> 
@@ -117,6 +119,7 @@
                 </div>
             </div>
         </div>
+
 
         <div class="gmaps">
             <div class="map" id="map"></div>
