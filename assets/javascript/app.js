@@ -142,7 +142,6 @@ $(document).ready(function() {
             var results = response.data;
             renderTable(results);
         });
-
     }
 
     //initiates breweryDB ajax by zipcode
@@ -185,7 +184,9 @@ $(document).ready(function() {
         setTimeout(showSlides, 3000); // Change image every 4 seconds
     }
 
-    // ------------------
+
+
+    // ----------------------------------------------------->
 
 
     function displayTopMenu() {
@@ -233,3 +234,4 @@ $(document).ready(function() {
         $('.main-container').append(tableContainer);
     };
 }); // Document Closing tag...
+
