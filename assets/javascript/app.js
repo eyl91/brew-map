@@ -12,23 +12,22 @@ $(document).ready(function(){
 	$(document).on("click", '#location-button', function(event){
 		getLocation();
 		event.preventDefault();
-		
 	});
-	//gets user selected search radius
 
+	//gets user selected search radius
 	$(document).on("click", '.dropdown-item', function(event){
 		radius = $(this).val();
-
 	});	
+
 	//triggers ajaxByZip
 	$(document).on("click", '#zipcode-button', function(event){
 		event.preventDefault();
 		zip = $("#main-form").val().trim();
 		console.log(zip);
 		$("#breweryList > tbody").empty();
-		ajaxByZip();
-		
+		ajaxByZip();	
 	});
+
 	//gets the users location and stores in lat and lng
 	function getLocation() {
     	navigator.geolocation.getCurrentPosition(function(position) {
@@ -153,9 +152,13 @@ $(document).ready(function(){
 
 
 
-//--------------------- Front End--------------------------->
 
-// --------- carousel
+
+//--------------------- FRONT END --------------------------->
+
+
+
+// -------------------- Carousel ---------------------->
 var slideIndex = 0;
     showSlides();
 
@@ -171,36 +174,42 @@ var slideIndex = 0;
         setTimeout(showSlides, 3000); // Change image every 4 seconds
     }
 
-// ------------------
 
 
+// ---------------------------------------------------->
+
+
+
+	// Display Top Menu 
 	function displayTopMenu() {
 		// Make Fixed menu appear by changing it's css...
 	    $('.top-menu').css('opacity', '1');
 	};
 
-
+	// Location button activates Top Menu and Creates Table...
 	$('.submit-btn-loc').on('click', function() {
 			$('.main-container').html('');
-	        // Add New style to Main Container...
-	        $('.main-container').addClass('hops');
+			// Apply scroll to Main Container...
+			$('body').attr('overflow','scroll');
 	        // Run function createTable...
 	        displayTopMenu();
+	        // Call Create Table...
 	        createTable();
 	});
 
 
+	// ZipCode button activates Top Menu and Creates Table...
 	$('.submit-btn-code').on('click', function() {
 			// Save the value entered by the user inside a variable...
 	        var usersLocationInput = $('#main-form').val();
-	        // Verify value is not empty
+	        // Apply scroll to Main Container...
+			$('body').attr('overflow','scroll');
+	        // Verify value is not empty...
 	        if (usersLocationInput > 0) {
 	         	// Call function to display Fixed menu...
 	         	displayTopMenu();
 	         	// Empty Main Container...
 	         	$('.main-container').html('');
-	         	// Add New style to Main Container...
-	         	$('.main-container').addClass('hops');
 	         	// Run function createTable...
 	         	createTable();
 	        } else {
@@ -216,7 +225,7 @@ var slideIndex = 0;
 				$('.main-container').html('<h4 class="table-name">Search Results</h4>');
 				// Create DIV that contains Table...
 				var tableContainer = $('<div>').addClass('table-cont');
-				// Create table add Class and Id attributes...
+				// Create Table, add Class and Id attributes...
 				var table = $('<table>').addClass('table');
 				// Create table row...
 				var row = $('<tr>');
@@ -224,7 +233,7 @@ var slideIndex = 0;
 				var tableBody = $('<tbody>');
 				// Added id name...
 				tableBody.attr('id', 'breweryList');
-				// Text for table headers.
+				// Text for table headers...
 				var hedrs = ['Brewery Name', 'Address', 'Phone Number', 'Distance', 'Logo']; 
 				// Creates a TH tag for every item on the hedrs array...
 				for(i = 0; i < hedrs.length; i++) {
@@ -241,6 +250,7 @@ var slideIndex = 0;
 				$(tableContainer).append(table);
 				$('.main-container').append(tableContainer);
 			};
+
 }); // Document Closing tag...
 
 
