@@ -4,115 +4,67 @@ Project 1
 */
 
 
-body {
-	overflow: hidden;
-	min-height: 100%;
-}
+/*body {
+    overflow: hidden;
+}*/
 
 
 /*---------------------- MAIN CONTAINER ------------------------------------------>*/
 .table-cont {
-	flex-grow: 3;
-	order: 1;
-	position: absolute;
-	margin-top: 7%;
-	left: 4%;
+    flex-grow: 3;
+    order: 1;
+    position: absolute;
+    margin-top: 7%;
+    left: 4%;
 }
 
 
 .gmaps {
-	position: fixed;
-	min-height: 600px;
-	min-width: 650px;
-	margin-top: 5%;
-	left: 58%;
+    position: fixed;
+    min-height: 600px;
+    min-width: 650px;
+    margin-top: 5%;
+    left: 58%;
 }
 
 .map {
-	min-width: 650px;
-	min-height: 650px;
+    min-width: 650px;
+    min-height: 650px;
+
+
 }
 
 .main-container {
     display: flex;
+    margin-top: 20px;
     position: relative;
-    min-height: 100%;
-    /*border: black 3px solid;*/
+}
+
+.beer-box {
+    height: 100%;
+    flex: 1;
+    /*width: 0 auto;*/
+    position: relative;
 }
 
 .search-box {
     position: relative;
-    flex: 1;
+    top: 50px;
+    /*left: 25%;*/
+    flex: 3;
     width: 100px;
-    /*border: black solid 3px;*/
-}
-
-.search-cont {
-    position: absolute;
-    top: 15%;
-    left: 0;
-    flex: 1;
-    width:100%;
-    /*border: black solid 3px;*/
-}
-
-.beer-box {
-    min-height: 100%;
-    flex: 1;
-    /*width: 0 auto;*/
-    position: relative;
-    /*border: black 3px solid;*/
-    overflow: hidden;
-}
-
-.beer-cont {
-    position: relative;
-    display: inline-block;
-    top: 4%;
-    left: 55%;
-    overflow: hidden;
-    min-height: 100%;
-    /*border: 3px solid black;*/
-}
-
-.main-buttons-container {
-	display: flex;
-	width: 600px;
-	justify-content: flex-start;
-	margin-top: 3%;
-}
-
-.beer-img {
-    position: absolute;
-    /*border: solid black 3px;*/
-    display: inline-block;
-    height: auto;
-    width: 270px;
-    top: 14%;
-    left: 55%;
-    display: flex;
-    justify-content: center;
-}
-
-.beer {
-	height: 1000px;
-	width: 270px;
-}
-
-.search-item {
-    display: flex;
 }
 
 .submit-btn-loc {
     background-color: white;
-    color: black;
-    font-size: 18px; 
+    color: gray;
+    /* border-top: none; */
+    /* border-bottom: none; */
+    /* border-right: gray 0.2px solid; */
+    /* border-left: gray 0.2px solid; */
     font-family: 'Libre Baskerville', serif;
     padding: 0 20px 0 20px;
-    border-top: none;
-    border-bottom: none;
-    border-right: none;
-	/border-left: 0.3px black solid;
+    border: none;
 }
 
 
@@ -124,33 +76,53 @@ body {
     padding: 1px 20px 1px 20px;
 }*/
 
-.submit-btn-loc-tm, .#zipcode-button2 {
+.submit-btn-loc-tm, .submit-btn-code {
     background-color: white;
-    color: black;
-    font-size: 18px; 
+    color: gray;
+    /* border-top: none; */
+    /* border-bottom: none; */
+    /* border-right: gray 0.2px solid; */
+    /* border-left: gray 0.2px solid; */
     font-family: 'Libre Baskerville', serif;
-    padding: 0 20px 0 20px;
-    border-top: none;
-    border-bottom: none;
-    border-right: none;
-	border-left: 0.3px gray solid;
+    /* padding: 0 20px 0 20px; */
+    border: none;
 }
 
 #dropdownMenuButton {
-    margin-top: 4%;
-    padding: 0 20px 0 20px;
+    padding: 10px;
+
+    border-right: 1px solid gray;
+}
+
+#location-button {
+    border-right: 1px solid gray;
 }
 
 .search-item {
     display: flex;
 }
 
+.beer {
+    position: absolute;
+    top: 0;
+    left: 7%;
+    overflow: hidden;
+    width: 0 auto;
+    max-width: 1000px;
+}
+
 .name {
     font-family: 'Abril Fatface', cursive;
     margin-bottom: 20px;
     font-size: 100px;
-    line-height: 95px;
+    line-height: 80px;
 }
+
+
+/*.beer {
+    height: 1000px;
+    width: 270px;
+}*/
 
 .view-btn {
     font-family: untitled-font-1;
@@ -164,13 +136,12 @@ body {
 .intro {
     font-family: 'Dancing Script', cursive;
     margin-bottom: 20px;
-    color: #4c4847;
+    color: gray;
 }
 
 .explore {
     font-family: 'Playfair Display', serif;
     margin-bottom: 20px;
-    margin-top: 55px;
 }
 
 .form {
@@ -236,11 +207,41 @@ body {
 }
 
 
+/*.hops {
+    background-image: url('file:///c:/Users/RICGRO1221/Desktop/UCSD/RICGRO1221.github.io/BeerApp/assets/images/Beer_bg3.jpg');
+    opacity: 0.3;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}*/
+
+
 /*------------------------carousel on bottle-----------------------*/
 
 * {
     box-sizing: border-box
 }
+
+.beer-box {
+    width: 300px;
+    position: relative;
+}
+
+
+/* Slideshow container */
+
+.beer-img {
+    border: 2px solid black;
+    max-width: 1000px;
+    position: absolute;
+    top: 400px;
+    left: 30%;
+}
+
+.beer {
+    margin-left: 10%;
+}
+
 
 /* Hide the images by default */
 
