@@ -187,6 +187,15 @@ Project 1
     line-height: 80px;
 }
 
+.name-tm:hover {
+    cursor: pointer;
+}
+
+.name:hover {
+cursor: pointer;
+}
+
+
 .explore-tm {
     padding-top: 10px;
     font-family: 'Playfair Display', serif;
