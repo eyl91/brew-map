@@ -11,6 +11,8 @@ $(document).ready(function() {
     //triggers ajaxByLocation
     $(document).on("click", '#location-button', function(event) {
         getLocation();
+        displayTopMenu();
+        createTable();
         event.preventDefault();
 
     });
@@ -26,7 +28,7 @@ $(document).ready(function() {
         var zipOption2 = $("#main-form").val();
 
         if (zipOption2 > 0) {
-            zip = zipOption2;
+        	zip = zipOption2;
             console.log(zip);
             displayTopMenu();
             ajaxByZip();
@@ -76,8 +78,58 @@ $(document).ready(function() {
         console.log("Latitude = " + lat);
         console.log("Longitude = " + lng);
     }
+
+    // render table function
+
+    function renderTable(results) {
+
+
+  
+
+    	for (var i = 0; i < results.length; i++) {
+                var marker = new google.maps.Marker({
+                    position: { lat: results[i].latitude, lng: results[i].longitude },
+                    map: map,
+                    title: results[i].brewery.name,
+                    icon: "assets/images/icon-beer.png",
+                });
+                var tdRow = $("<tr>");
+                var name = $("<td>");
+                name.text(results[i].brewery.name);
+          		var dis = $("<td>")
+          		if (typeof results[i].distance === 'undefined') {
+          			dis.text('');
+
+          		} else {
+          			dis.text(results[i].distance + " miles");
+          		}
+
+                var address = $("<td>");
+                address.text(results[i].streetAddress);
+                var phone = $("<td>");
+                phone.text(results[i].phone);
+                var image = $("<td>");
+                var imageSrc = $("<img>");
+                image.append(imageSrc);
+                if (typeof results[i].brewery.images === 'undefined' ) {
+					imageSrc.attr("src", './assets/images/default-beer-logo.png');
+            	} else {
+            		imageSrc.attr("src", results[i].brewery.images.icon);
+            	}
+
+                // defaultImage(results[i].brewery.images.icon;);
+                tdRow.append(image);
+                tdRow.append(name);
+                tdRow.append(address);
+                tdRow.append(phone);
+                tdRow.append(dis);
+                $(".table > tbody").append(tdRow);
+            }
+    }
+     
+
     //initiates breweryDB ajax by user location
-    function ajaxByLocation() {
+   	function ajaxByLocation() {
         var key = "add62ea870e1bfdea1eee00e3594dbf5";
         var queryLocationURL = "https://cors-anywhere.herokuapp.com/http://api.brewerydb.com/v2/search/geo/point?lat=" + lat + "&lng=" + lng + "&radius=" + radius + "&key=" + key + "";
 
@@ -88,37 +140,8 @@ $(document).ready(function() {
             console.log(response.data);
             //looping thru results and adding to table
             var results = response.data;
-
-            for (var i = 0; i < results.length; i++) {
-                var marker = new google.maps.Marker({
-                    position: { lat: results[i].latitude, lng: results[i].longitude },
-                    map: map,
-                    title: results[i].brewery.name,
-                    icon: "assets/images/icon-beer.png",
-                });
-                var tdRow = $("<tr>");
-                var name = $("<td>");
-                name.text(results[i].brewery.name);
-                var dis = $("<td>")
-                dis.text(results[i].distance + " miles");
-                var address = $("<td>");
-                address.text(results[i].streetAddress);
-                var phone = $("<td>");
-                phone.text(results[i].phone);
-                var image = $("<td>");
-                var imageSrc = $("<img>");
-                image.append(imageSrc);
-                imageSrc.attr("src", results[i].brewery.images.icon);
-                tdRow.append(image);
-                tdRow.append(name);
-                tdRow.append(address);
-                tdRow.append(phone);
-                tdRow.append(dis);
-                $(".table > tbody").append(tdRow);
-            }
-
+            renderTable(results);
         });
-
     }
 
     //initiates breweryDB ajax by zipcode
@@ -131,37 +154,14 @@ $(document).ready(function() {
             method: "GET"
         }).done(function(response) {
             console.log(response.data);
+
             //looping thru results and adding to table
             var results = response.data;
             zipLat = results[0].latitude;
             zipLng = results[0].longitude;
             initMapZip();
-
-            for (var i = 0; i < results.length; i++) {
-                var marker = new google.maps.Marker({
-                    position: { lat: results[i].latitude, lng: results[i].longitude },
-                    map: map,
-                    title: results[i].brewery.name,
-                    icon: "assets/images/icon-beer.png",
-                });
-                var tdRow = $("<tr>");
-                var name = $("<td>");
-                name.text(results[i].brewery.name);
-                var address = $("<td>");
-                address.text(results[i].streetAddress);
-                var phone = $("<td>");
-                var image = $("<td>");
-                var imageSrc = $("<img>");
-                image.append(imageSrc);
-                imageSrc.attr("src", results[i].brewery.images.icon);
-                tdRow.append(image);
-                phone.text(results[i].phone);
-                tdRow.append(name);
-                tdRow.append(address);
-                tdRow.append(phone);
-                $(".table > tbody").append(tdRow);
-            }
-        })
+            renderTable(results);
+        });
     }
 
 
@@ -184,7 +184,9 @@ $(document).ready(function() {
         setTimeout(showSlides, 3000); // Change image every 4 seconds
     }
 
-    // ------------------
+
+
+    // ----------------------------------------------------->
 
 
     function displayTopMenu() {
@@ -215,7 +217,7 @@ $(document).ready(function() {
         // Added id name...
         tableBody.attr('id', 'breweryList');
         // Text for table headers.
-        var hedrs = ['Brewery Name', 'Address', 'Phone Number', 'Distance', 'Logo'];
+        var hedrs = ['Logo', 'Brewery Name', 'Address', 'Phone Number', 'Distance'];
         // Creates a TH tag for every item on the hedrs array...
         for (i = 0; i < hedrs.length; i++) {
             var tabHead = $('<th>').attr('scope', 'col');
@@ -232,3 +234,4 @@ $(document).ready(function() {
         $('.main-container').append(tableContainer);
     };
 }); // Document Closing tag...
+
