@@ -5,31 +5,31 @@ Project 1
 
 
 /*body {
-	overflow: hidden;
+    overflow: hidden;
 }*/
 
 
 /*---------------------- MAIN CONTAINER ------------------------------------------>*/
 .table-cont {
-	flex-grow: 3;
-	order: 1;
-	position: absolute;
-	margin-top: 7%;
-	left: 4%;
+    flex-grow: 3;
+    order: 1;
+    position: absolute;
+    margin-top: 7%;
+    left: 4%;
 }
 
 
 .gmaps {
-	position: fixed;
-	min-height: 600px;
-	min-width: 650px;
-	margin-top: 5%;
-	left: 58%;
+    position: fixed;
+    min-height: 600px;
+    min-width: 650px;
+    margin-top: 5%;
+    left: 58%;
 }
 
 .map {
-	min-width: 650px;
-	min-height: 650px;
+    min-width: 650px;
+    min-height: 650px;
 
 
 }
@@ -38,6 +38,7 @@ Project 1
     display: flex;
     margin-top: 20px;
     position: relative;
+    
 }
 
 .beer-box {
@@ -45,6 +46,8 @@ Project 1
     flex: 1;
     /*width: 0 auto;*/
     position: relative;
+    margin-right: 20px;
+
 }
 
 .search-box {
@@ -120,8 +123,8 @@ Project 1
 
 
 /*.beer {
-	height: 1000px;
-	width: 270px;
+    height: 1000px;
+    width: 270px;
 }*/
 
 .view-btn {
@@ -187,6 +190,15 @@ Project 1
     line-height: 80px;
 }
 
+.name-tm:hover {
+    cursor: pointer;
+}
+
+.name:hover {
+cursor: pointer;
+}
+
+
 .explore-tm {
     padding-top: 10px;
     font-family: 'Playfair Display', serif;
@@ -208,11 +220,11 @@ Project 1
 
 
 /*.hops {
-	background-image: url('file:///c:/Users/RICGRO1221/Desktop/UCSD/RICGRO1221.github.io/BeerApp/assets/images/Beer_bg3.jpg');
-	opacity: 0.3;
-	position: absolute;
-	height: 100%;
-	width: 100%;
+    background-image: url('file:///c:/Users/RICGRO1221/Desktop/UCSD/RICGRO1221.github.io/BeerApp/assets/images/Beer_bg3.jpg');
+    opacity: 0.3;
+    position: absolute;
+    height: 100%;
+    width: 100%;
 }*/
 
 
@@ -277,3 +289,8 @@ Project 1
         opacity: 1
     }
 }
+
+/*media query*/
+
+
+
