@@ -1,14 +1,3 @@
-/*
-BEER APP
-Project 1
-*/
-
-
-/*body {
-    overflow: hidden;
-}*/
-
-
 /*---------------------- MAIN CONTAINER ------------------------------------------>*/
 .table-cont {
     flex-grow: 3;
@@ -48,7 +37,8 @@ Project 1
     flex: 1;
     /*width: 0 auto;*/
     position: relative;
-    margin-right: 20px;
+    margin-right: 5%;
+    margin-left: 20%;
 
 }
 
@@ -63,33 +53,17 @@ Project 1
 .submit-btn-loc {
     background-color: white;
     color: gray;
-    /* border-top: none; */
-    /* border-bottom: none; */
-    /* border-right: gray 0.2px solid; */
-    /* border-left: gray 0.2px solid; */
+
     font-family: 'Libre Baskerville', serif;
     padding: 0 20px 0 20px;
     border: none;
 }
 
 
-/*.submit-btn-code {
-    background-color: white;
-    color: gray;
-    border: none;
-    font-family: 'Libre Baskerville', serif;
-    padding: 1px 20px 1px 20px;
-}*/
-
 .submit-btn-loc-tm, .submit-btn-code {
     background-color: white;
     color: gray;
-    /* border-top: none; */
-    /* border-bottom: none; */
-    /* border-right: gray 0.2px solid; */
-    /* border-left: gray 0.2px solid; */
     font-family: 'Libre Baskerville', serif;
-    /* padding: 0 20px 0 20px; */
     border: none;
 }
 
@@ -105,7 +79,7 @@ Project 1
 
 .search-item {
     display: flex;
-
+    width: 60%;
 }
 
 .beer {
@@ -123,12 +97,6 @@ Project 1
     font-size: 100px;
     line-height: 80px;
 }
-
-
-/*.beer {
-    height: 1000px;
-    width: 270px;
-}*/
 
 .view-btn {
     font-family: untitled-font-1;
@@ -222,15 +190,6 @@ cursor: pointer;
 }
 
 
-/*.hops {
-    background-image: url('file:///c:/Users/RICGRO1221/Desktop/UCSD/RICGRO1221.github.io/BeerApp/assets/images/Beer_bg3.jpg');
-    opacity: 0.3;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}*/
-
-
 /*------------------------carousel on bottle-----------------------*/
 
 * {
@@ -294,7 +253,7 @@ cursor: pointer;
 }
 
 /*media query*/
-@media screen and (max-width:768px) {
+@media screen and (max-width:1160px) {
     * {
         overflow: visible;
     }
@@ -334,8 +293,6 @@ cursor: pointer;
         position: static;
         
     }
-
-
 
 }
 
