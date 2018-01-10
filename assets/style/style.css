@@ -205,11 +205,11 @@ cursor: pointer;
 /* Slideshow container */
 
 .beer-img {
-    border: 2px solid black;
-    max-width: 1000px;
+    width: 190px;
+    height:250px;
     position: absolute;
-    top: 400px;
-    left: 30%;
+    top: 370px;
+    left: 23%;
 }
 
 .beer {
@@ -221,7 +221,7 @@ cursor: pointer;
 
 .mySlides {
     display: none;
-    width: 40%;
+    width: 100%;
 }
 
 
