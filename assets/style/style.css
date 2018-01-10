@@ -38,6 +38,7 @@ Project 1
     display: flex;
     margin-top: 20px;
     position: relative;
+    
 }
 
 .beer-box {
@@ -45,6 +46,8 @@ Project 1
     flex: 1;
     /*width: 0 auto;*/
     position: relative;
+    margin-right: 20px;
+
 }
 
 .search-box {
@@ -187,6 +190,15 @@ Project 1
     line-height: 80px;
 }
 
+.name-tm:hover {
+    cursor: pointer;
+}
+
+.name:hover {
+cursor: pointer;
+}
+
+
 .explore-tm {
     padding-top: 10px;
     font-family: 'Playfair Display', serif;
@@ -277,3 +289,8 @@ Project 1
         opacity: 1
     }
 }
+
+/*media query*/
+
+
+

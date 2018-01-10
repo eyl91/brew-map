@@ -8,6 +8,17 @@ $(document).ready(function() {
     var zipLat;
     var zipLng;
 
+
+    //reload the page
+
+    $(document).on('click', '.name-tm', function(event) {
+        location.reload();
+    });
+
+    $(document).on('click', '.name', function(event) {
+        location.reload();
+    });
+
     //triggers ajaxByLocation
     $(document).on("click", '#location-button', function(event) {
         getLocation();
