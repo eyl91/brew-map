@@ -16,13 +16,15 @@ Project 1
     position: absolute;
     margin-top: 7%;
     left: 4%;
+    width: 50%;
 }
 
 
 .gmaps {
     position: fixed;
-    min-height: 600px;
-    min-width: 650px;
+    min-height: 400px;
+    min-width: 400px;
+    width: 50%;
     margin-top: 5%;
     left: 58%;
 }
@@ -103,6 +105,7 @@ Project 1
 
 .search-item {
     display: flex;
+
 }
 
 .beer {
@@ -291,6 +294,50 @@ cursor: pointer;
 }
 
 /*media query*/
+@media screen and (max-width:768px) {
+    * {
+        overflow: visible;
+    }
+    .beer-box {
+        display: none;
+    }
+    .search-box {
+        margin-left: 20%;
+    }
+    .name-tm {
+        font-size: 40px;
+        line-height: 40px;
+        margin: 20px 20px 20px 10px;
+    }
+    .explore-tm {
+        display: none;
+    }
+    
+    .search-box {
+        margin: auto;
+        padding: 10px;
+    }
+    .table-cont, {
+        margin-top: 20%;
+        
+          
+    }
+    
+    .gmaps, .table-cont {
+        position: static;
+       
+        width: 100%;
+        padding: 2%;
+    }
+
+    .column {
+        position: static;
+        
+    }
+
+
+
+}
 
 
 

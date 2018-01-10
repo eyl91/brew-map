@@ -25,6 +25,7 @@ $(document).ready(function() {
         displayTopMenu();
         createTable();
         event.preventDefault();
+        $('.main-container').addClass('column');
 
     });
     //gets user selected search radius
