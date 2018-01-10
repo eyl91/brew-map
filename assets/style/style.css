@@ -205,13 +205,12 @@ cursor: pointer;
 /* Slideshow container */
 
 .beer-img {
-    width: 190px;
+    width: 185px;
     height:250px;
     position: absolute;
     top: 370px;
-    left: 21.5%;
+    left: 22.5%;
 }
-
 .beer {
     margin-left: 10%;
 }
