@@ -11,16 +11,13 @@
 
 .gmaps {
     position: fixed;
-    min-height: 400px;
-    min-width: 400px;
-    width: 50%;
     margin-top: 5%;
     left: 58%;
 }
 
 .map {
     min-width: 650px;
-    min-height: 650px;
+    min-height: 600px;
 
 
 }
