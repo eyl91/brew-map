@@ -74,6 +74,13 @@
     border-right: 1px solid gray;
 }
 
+
+#dropdownMenuButton:hover, #location-button:hover, #zipcode-button1:hover, #zipcode-button2:hover {
+    cursor: pointer;
+    color: black;
+}
+
+
 .search-item {
     display: flex;
     width: 60%;
@@ -124,6 +131,7 @@
 
 
 /*---------------------- TOP MENU ------------------------------------------>*/
+
 
 .inp-btn {
     display: flex;
