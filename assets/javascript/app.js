@@ -26,6 +26,7 @@ $(document).ready(function() {
         createTable();
         event.preventDefault();
         $('.main-container').addClass('column');
+        $('.footer').hide();
 
     });
     //gets user selected search radius
@@ -51,6 +52,7 @@ $(document).ready(function() {
 
     $(document).on("click", '.submit-btn-code', function(event) {
         event.preventDefault();
+        $('.footer').hide();
         var zipOption1 = $("#main-form-tm").val();
         var zipOption2 = $("#main-form").val();
 

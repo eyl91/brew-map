@@ -193,6 +193,13 @@ cursor: pointer;
     margin-top: 10px;
 }
 
+.footer {
+    margin-top: 22%;
+    text-align: center;
+    color: #ccc;
+    font-family: 'Libre Baskerville', serif;
+}
+
 
 /*------------------------carousel on bottle-----------------------*/
 
